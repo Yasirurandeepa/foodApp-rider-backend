@@ -33,6 +33,9 @@ public class User extends AuditModel {
     @Size(min =1, max = 50)
     private String username;
 
+    @Column(columnDefinition = "text")
+    private String password;
+
     @NotBlank
     @Column(columnDefinition = "text")
     private String email;
@@ -41,6 +44,8 @@ public class User extends AuditModel {
     @Column(columnDefinition = "text")
     private String phone;
 
+    @Column(columnDefinition = "text")
+    private String status;
 
     public Long getId() {
         return id;
@@ -72,5 +77,21 @@ public class User extends AuditModel {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }
