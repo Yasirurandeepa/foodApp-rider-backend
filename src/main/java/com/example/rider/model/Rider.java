@@ -1,24 +1,12 @@
 package com.example.rider.model;
 
-import org.springframework.security.core.parameters.P;
-
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
 @Entity
-@Table(name = "users")
-public class User extends AuditModel {
-
-    public User() {
-
-    }
-
-    public User(String Username, String Email, String Phone){
-        this.username = Username;
-        this.email = Email;
-        this.phone = Phone;
-    }
+@Table(name = "rider")
+public class Rider extends AuditModel {
 
     @Id
     @GeneratedValue(generator = "user_generator")
